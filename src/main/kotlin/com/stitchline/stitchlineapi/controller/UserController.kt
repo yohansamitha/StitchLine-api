@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api/v1/user")
+@RequestMapping("/stitchline/api/v1/user")
 class UserController {
 
     @Autowired
