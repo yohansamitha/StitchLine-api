@@ -4,18 +4,8 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
 @Document("User")
-class User(email: String, name: String, address: String, mobile: Int, username: String, password: String, nic: String,
-           employeeNumber: String, post: String) {
-    @Id
-    var email = email
-    var name = name
-    var address = address
-    var mobile = mobile
-    var username = username
-    var password = password
-    var nic = nic
-    var employeeNumber = employeeNumber
-    var post = post
+class User(@Id var email: String, var name: String, var address: String, var mobile: Int, var username: String, var password: String, var nic: String,
+           var employeeNumber: String, var post: String) {
 
     override fun toString(): String {
         return "User(email='$email', name='$name', address='$address', mobile=$mobile, username='$username', password='$password', nic='$nic', employeeNumber='$employeeNumber', post='$post')"
