@@ -48,7 +48,7 @@ class UserController {
             "Invalid email address please make sure email address is correct"
         } else if (userDTO.name.trim().length <= 5) {
             "Invalid name please make sure name is correct"
-        } else if (userDTO.address.trim().length <= 3) {
+        } else if (userDTO.post == "Customer" && userDTO.address.trim().length <= 3) {
             "Invalid address please make sure address is correct"
         } else if (countInt(userDTO.mobile) <= 3) {
             "Invalid mobile number please make sure mobile number is correct"
@@ -56,9 +56,9 @@ class UserController {
             "Invalid username please make sure username is correct"
         } else if (userDTO.password.trim().length <= 3) {
             "Invalid password please make sure password is correct"
-        } else if (userDTO.nic.trim().length <= 3) {
+        } else if (userDTO.post == "Admin" && userDTO.nic.trim().length <= 3) {
             "Invalid nic please make sure nic is correct"
-        } else if (userDTO.employeeNumber.trim().length <= 3) {
+        } else if (userDTO.post == "Admin" && userDTO.employeeNumber.trim().length <= 3) {
             "Invalid employeeNumber please make sure employeeNumber is correct"
         } else if (userDTO.post.trim().length <= 3) {
             "Invalid post please make sure post is correct"
