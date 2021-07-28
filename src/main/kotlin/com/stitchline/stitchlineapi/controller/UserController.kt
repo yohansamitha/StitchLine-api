@@ -43,6 +43,7 @@ class UserController {
     }
 
     //check all request data for null or useless data to validate
+    //check all request data for null or useless data to validate
     private fun userValidate(userDTO: UserDTO): String {
         return if (!Regex("[a-zA-Z0-9+._%\\-]{1,256}@[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})").containsMatchIn(userDTO.email)) {
             "Invalid email address please make sure email address is correct"
